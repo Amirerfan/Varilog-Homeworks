@@ -1,0 +1,136 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml ram.twx ram.ncd -o ram.twr ram.pcf
+
+Design file:              ram.ncd
+Physical constraint file: ram.pcf
+Device,package,speed:     xc6slx4,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+-------------+------------+------------+------------+------------+------------------+--------+
+             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source       | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+-------------+------------+------------+------------+------------+------------------+--------+
+address_in<0>|    0.486(R)|      SLOW  |    0.676(R)|      SLOW  |clk_BUFGP         |   0.000|
+address_in<1>|    0.574(R)|      SLOW  |    0.591(R)|      SLOW  |clk_BUFGP         |   0.000|
+address_in<2>|    0.378(R)|      SLOW  |    0.801(R)|      SLOW  |clk_BUFGP         |   0.000|
+address_in<3>|    2.073(R)|      SLOW  |   -0.482(R)|      FAST  |clk_BUFGP         |   0.000|
+address_in<4>|    1.815(R)|      SLOW  |   -0.263(R)|      SLOW  |clk_BUFGP         |   0.000|
+address_in<5>|    1.747(R)|      SLOW  |   -0.386(R)|      SLOW  |clk_BUFGP         |   0.000|
+data_in<0>   |    0.251(R)|      SLOW  |    0.750(R)|      SLOW  |clk_BUFGP         |   0.000|
+data_in<1>   |    0.565(R)|      SLOW  |    0.638(R)|      SLOW  |clk_BUFGP         |   0.000|
+data_in<2>   |    0.346(R)|      SLOW  |    0.873(R)|      SLOW  |clk_BUFGP         |   0.000|
+data_in<3>   |    0.353(R)|      SLOW  |    0.850(R)|      SLOW  |clk_BUFGP         |   0.000|
+data_in<4>   |    1.248(R)|      SLOW  |   -0.191(R)|      SLOW  |clk_BUFGP         |   0.000|
+data_in<5>   |    2.086(R)|      SLOW  |   -0.682(R)|      FAST  |clk_BUFGP         |   0.000|
+data_in<6>   |    2.033(R)|      SLOW  |   -0.634(R)|      FAST  |clk_BUFGP         |   0.000|
+data_in<7>   |    1.981(R)|      SLOW  |   -0.620(R)|      FAST  |clk_BUFGP         |   0.000|
+write_enable |    1.238(R)|      SLOW  |    0.023(R)|      SLOW  |clk_BUFGP         |   0.000|
+-------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+data_out<0> |         7.799(R)|      SLOW  |         4.149(R)|      FAST  |clk_BUFGP         |   0.000|
+data_out<1> |         7.747(R)|      SLOW  |         4.107(R)|      FAST  |clk_BUFGP         |   0.000|
+data_out<2> |         7.816(R)|      SLOW  |         4.163(R)|      FAST  |clk_BUFGP         |   0.000|
+data_out<3> |         7.917(R)|      SLOW  |         4.278(R)|      FAST  |clk_BUFGP         |   0.000|
+data_out<4> |         7.623(R)|      SLOW  |         4.072(R)|      FAST  |clk_BUFGP         |   0.000|
+data_out<5> |         7.587(R)|      SLOW  |         3.945(R)|      FAST  |clk_BUFGP         |   0.000|
+data_out<6> |         7.570(R)|      SLOW  |         3.944(R)|      FAST  |clk_BUFGP         |   0.000|
+data_out<7> |         7.244(R)|      SLOW  |         3.784(R)|      FAST  |clk_BUFGP         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+address_in<0>  |data_out<0>    |    7.004|
+address_in<0>  |data_out<1>    |    6.974|
+address_in<0>  |data_out<2>    |    6.985|
+address_in<0>  |data_out<3>    |    7.127|
+address_in<0>  |data_out<4>    |    6.996|
+address_in<0>  |data_out<5>    |    6.979|
+address_in<0>  |data_out<6>    |    6.762|
+address_in<0>  |data_out<7>    |    6.622|
+address_in<1>  |data_out<0>    |    7.108|
+address_in<1>  |data_out<1>    |    6.979|
+address_in<1>  |data_out<2>    |    6.776|
+address_in<1>  |data_out<3>    |    7.081|
+address_in<1>  |data_out<4>    |    7.095|
+address_in<1>  |data_out<5>    |    6.982|
+address_in<1>  |data_out<6>    |    6.693|
+address_in<1>  |data_out<7>    |    6.570|
+address_in<2>  |data_out<0>    |    6.732|
+address_in<2>  |data_out<1>    |    6.656|
+address_in<2>  |data_out<2>    |    6.923|
+address_in<2>  |data_out<3>    |    7.033|
+address_in<2>  |data_out<4>    |    6.719|
+address_in<2>  |data_out<5>    |    6.659|
+address_in<2>  |data_out<6>    |    6.717|
+address_in<2>  |data_out<7>    |    6.388|
+address_in<3>  |data_out<0>    |    8.510|
+address_in<3>  |data_out<1>    |    8.114|
+address_in<3>  |data_out<2>    |    8.034|
+address_in<3>  |data_out<3>    |    8.172|
+address_in<3>  |data_out<4>    |    7.853|
+address_in<3>  |data_out<5>    |    7.783|
+address_in<3>  |data_out<6>    |    7.617|
+address_in<3>  |data_out<7>    |    7.328|
+address_in<4>  |data_out<0>    |    8.239|
+address_in<4>  |data_out<1>    |    7.976|
+address_in<4>  |data_out<2>    |    8.062|
+address_in<4>  |data_out<3>    |    8.230|
+address_in<4>  |data_out<4>    |    7.731|
+address_in<4>  |data_out<5>    |    7.818|
+address_in<4>  |data_out<6>    |    7.651|
+address_in<4>  |data_out<7>    |    7.392|
+address_in<5>  |data_out<0>    |    7.939|
+address_in<5>  |data_out<1>    |    7.631|
+address_in<5>  |data_out<2>    |    7.574|
+address_in<5>  |data_out<3>    |    7.706|
+address_in<5>  |data_out<4>    |    7.602|
+address_in<5>  |data_out<5>    |    7.310|
+address_in<5>  |data_out<6>    |    7.307|
+address_in<5>  |data_out<7>    |    7.012|
+---------------+---------------+---------+
+
+
+Analysis completed Wed May 29 12:14:33 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4554 MB
+
+
+
