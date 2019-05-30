@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "C:/Users/Amirerfan/xilinx workspace/github/two-stage-pipline-multiplier/multiplier.xst" -ofn "C:/Users/Amirerfan/xilinx workspace/github/two-stage-pipline-multiplier/multiplier.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx4-tqg144-3 "multiplier.ngc" multiplier.ngd  
+map -intstyle ise -p xc6slx4-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o multiplier_map.ncd multiplier.ngd multiplier.pcf 
+par -w -intstyle ise -ol high -mt off multiplier_map.ncd multiplier.ncd multiplier.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml multiplier.twx multiplier.ncd -o multiplier.twr multiplier.pcf 
+xst -intstyle ise -ifn "C:/Users/Amirerfan/xilinx workspace/github/two-stage-pipline-multiplier/multiplier.xst" -ofn "C:/Users/Amirerfan/xilinx workspace/github/two-stage-pipline-multiplier/multiplier.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx4-tqg144-3 "multiplier.ngc" multiplier.ngd  
+map -intstyle ise -p xc6slx4-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o multiplier_map.ncd multiplier.ngd multiplier.pcf 
+par -w -intstyle ise -ol high -mt off multiplier_map.ncd multiplier.ncd multiplier.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml multiplier.twx multiplier.ncd -o multiplier.twr multiplier.pcf 

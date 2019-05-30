@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Amirerfan/xilinx workspace/github/two-stage-pipline-multiplier/mult_test_isim_beh.exe" -prj "C:/Users/Amirerfan/xilinx workspace/github/two-stage-pipline-multiplier/mult_test_beh.prj" "work.mult_test" "work.glbl" 
